@@ -1,0 +1,91 @@
+[COMMANDER]
+1 Hakbal of the Surging Soul
+[CUSTO 1]
+1 Benthic Biomancer
+1 Hardened Scales
+1 Rapid Hybridization
+1 Sol Ring
+[CUSTO 2]
+1 Arcane Signet
+1 Bygone Marvels
+1 Coralhelm Commander
+1 Curse of the Swine
+1 Deeproot Elite
+1 Explore
+1 Growth Spiral
+1 Kiora's Follower
+1 Master of the Pearl Trident
+1 Merfolk Mistbinder
+1 Merfolk Skydiver
+1 Metallic Mimic
+1 Nicanzil, Current Conductor
+1 Ripples of Potential
+1 Simic Ascendancy
+1 Simic Signet
+1 Swiftfoot Boots
+1 Thieving Skydiver
+[CUSTO 3]
+1 Allure of the Unknown
+1 Branching Evolution
+1 Cold-Eyed Selkie
+1 Commander's Sphere
+1 Deeproot Waters
+1 Emperor Mihail II
+1 Evolution Sage
+1 Inspiring Call
+1 Kodama's Reach
+1 Kopala, Warden of Waves
+1 Kumena, Tyrant of Orazca
+1 Abrupt Decay
+1 Merfolk Sovereign
+1 Merrow Reejerey
+1 Quandrix Command
+1 Ravenform
+1 Realmwalker
+1 Sage of Fables
+1 Singer of Swift Rivers
+1 Sultai Charm
+1 Svyelun of Sea and Sky
+1 Thassa, God of the Sea
+1 Topography Tracker
+1 Vorel of the Hull Clade
+[CUSTO 4]
+1 Aetherize
+1 Deeproot Historian
+1 Herald of Secret Streams
+1 Ruinous Intrusion
+1 Seafloor Oracle
+1 Surgespanner
+1 Tributary Instructor
+1 Wave Goodbye
+1 Zegana, Utopian Speaker
+[CUSTO 5]
+1 Kindred Discovery
+1 Mist Dancer
+1 Reflections of Littjara
+1 Tatyova, Benthic Druid
+[CUSTO 6]
+1 Prime Speaker Zegana
+1 Xolatoyac, the Smiling Flood
+[CUSTO 7+]
+1 Tishana, Voice of Thunder
+1 Commit // Memory
+[TERRENOS]
+1 Alchemist's Refuge
+1 Command Tower
+7 Forest
+1 Hinterland Harbor
+13 Island
+1 Karn's Bastion
+1 Llanowar Reborn
+1 Mosswort Bridge
+1 Myriad Landscape
+1 Path of Ancestry
+1 Reliquary Tower
+1 Rogue's Passage
+1 Secluded Courtyard
+1 Simic Growth Chamber
+1 Temple of Mystery
+1 Temple of the False God
+1 Unclaimed Territory
+1 Vineglimmer Snarl
