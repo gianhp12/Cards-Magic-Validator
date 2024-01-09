@@ -10,4 +10,8 @@ public class Card {
     private String name;
     private String type;
     private List<String> color_identity;
+    private boolean valid;
+    public Card() {
+        this.valid = true;
+    }
 }
