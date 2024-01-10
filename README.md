@@ -23,11 +23,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - Project Reactor 3.6.1
 
 ## Como usar
-
 # Clone este repositório
 ```bash
 git clone https://github.com/gianhp12/Cards-Magic-Validator
 ```
+
+#### As informações das cartas que serão validadas devem ser colocadas dentro do arquivo data.txt existente no caminho: cardsmagicvalidator\src\main\resources\data\data.txt
+ Seguindo o padrão de quantidade, nome da carta e nomenclaturas de tipos de cartas entre colchetes.
+
 #### Obs: Necessário possuir o Java instalado para executar o projeto. O mesmo pode ser baixado pelo link abaixo:
 <a>https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR</a>
 
@@ -42,6 +45,7 @@ git clone https://github.com/gianhp12/Cards-Magic-Validator
 #### O comando irá gerar um JAR executável na pasta target do projeto.
 
 #### O serviço inciará na porta padrão do Spring :8080.
+
 
 Agradeço muito a LuizaLabs pela oportunidade!
 
