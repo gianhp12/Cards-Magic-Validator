@@ -2,7 +2,7 @@
 <h1 align="center">Validador de Cartas Magic: The Gathering</h1>
 
 <p align="center">
-  Um serviço desenvolvido para validar cartas no Scryfall de acordo com as regras de negócio disponibilizadas pela equipe.
+  Um serviço desenvolvido para validar cartas de acordo com as regras de negócio disponibilizadas pela equipe do LuizaLabs.
 </p>
 
 
