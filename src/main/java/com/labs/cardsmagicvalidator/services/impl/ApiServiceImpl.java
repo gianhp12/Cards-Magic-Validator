@@ -4,7 +4,6 @@ import com.labs.cardsmagicvalidator.model.Card;
 import com.labs.cardsmagicvalidator.model.Records;
 import com.labs.cardsmagicvalidator.services.ApiService;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,6 @@ import reactor.netty.http.client.HttpClient;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Collections;
 
 import static org.springframework.http.MediaType.APPLICATION_JSON;
 

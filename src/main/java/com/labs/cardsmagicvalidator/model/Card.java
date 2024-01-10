@@ -11,7 +11,16 @@ public class Card {
     private String type;
     private List<String> color_identity;
     private boolean valid;
+
     public Card() {
         this.valid = true;
     }
+
+    public Card(int quantity, String name, List<String> color_identity, boolean valid) {
+        this.name = name;
+        this.color_identity = color_identity;
+        this.quantity = quantity;
+        this.valid = valid;
+    }
+
 }

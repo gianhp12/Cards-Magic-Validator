@@ -14,10 +14,7 @@ import org.springframework.web.reactive.function.client.WebClientResponseExcepti
 
 import java.io.FileNotFoundException;
 import java.text.DecimalFormat;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @SpringBootApplication
 public class MainApplication implements CommandLineRunner {
@@ -33,6 +30,7 @@ public class MainApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(MainApplication.class, args);
     }
+
     @Override
     public void run(String... args) throws Exception {
         String filePath = "data/deck.txt";
@@ -47,25 +45,16 @@ public class MainApplication implements CommandLineRunner {
                         card.setValid(false);
                     }
                 });
-                List<Card> validCards = cards.stream()
-                        .filter(Card::isValid)
-                        .collect(Collectors.toList());
-                List<Card> notFoundCards = cards.stream()
-                        .filter(card -> !card.isValid())
-                        .collect(Collectors.toList());
+                List<Card> validCards = deckService.findValidCards(cards);
+                List<Card> notFoundCards = deckService.findInvalidCards(cards);
                 List<Color> colors = deckService.countNumberOfColor(validCards);
                 colors.forEach(color -> color.setPredominance(deckService.calculatePredominanceColor(color, validCards.size())));
                 validCards.forEach(card -> card.setValid(deckService.verifyCardIsValid(card, colors)));
-                Color colorMin = colors.stream()
-                        .filter(color -> color.getPredominance() >= 5.0f)
-                        .min(Comparator.comparing(Color::getPredominance))
-                        .orElse(null);
-                System.out.println("Cor inválida: "+ colorMin.getAcronym());
-                System.out.println("Quota: " + new DecimalFormat("0.00").format(colorMin.getPredominance()) + "%");
-                List<Card> cardsWithColorMin = validCards.stream()
-                        .filter(card -> card.getColor_identity().contains(String.valueOf(colorMin.getAcronym())))
-                        .collect(Collectors.toList());
-                for(Card card : cardsWithColorMin){
+                Color colorMin = deckService.findColorMin(colors);
+                System.out.println("Cor inválida: " + (colorMin != null ? colorMin.getAcronym() : "Não localizada"));
+                System.out.println("Quota: " + new DecimalFormat("0.00").format(colorMin != null ? colorMin.getPredominance() : 0) + "%");
+                List<Card> cardsWithColorMin = deckService.findCardsWithColorMin(validCards, colorMin);
+                for (Card card : cardsWithColorMin) {
                     System.out.println(card.getColor_identity() + " " + card.getName() + "/ Qtd: " + card.getQuantity());
                 }
                 System.out.println(notFoundCards.size() + " cartas não foram encontradas no Scryfall!");

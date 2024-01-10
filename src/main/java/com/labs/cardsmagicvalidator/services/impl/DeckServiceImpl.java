@@ -5,16 +5,15 @@ import com.labs.cardsmagicvalidator.model.Color;
 import com.labs.cardsmagicvalidator.services.DeckService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
 public class DeckServiceImpl implements DeckService {
     public List<Color> countNumberOfColor(List<Card> cards) {
-        List<Color> colors = new ArrayList<>();
+        if (cards == null || cards.isEmpty()) {
+            return Collections.emptyList();
+        }
         Color green = new Color('G', 0, 0);
         Color blue = new Color('U', 0, 0);
         Color black = new Color('B', 0, 0);
@@ -50,8 +49,7 @@ public class DeckServiceImpl implements DeckService {
                 }
             }
         }
-        colors.addAll(List.of(green, blue, black, red, white, invalid, empty));
-        return colors;
+        return new ArrayList<>(List.of(green, blue, black, red, white, invalid, empty));
     }
 
     public float calculatePredominanceColor(Color color, int totalCards) {
@@ -61,7 +59,7 @@ public class DeckServiceImpl implements DeckService {
     public boolean verifyCardIsValid(Card card, List<Color> colors) {
         List<Color> colorsWithMinPredominance = colors.stream()
                 .filter(color -> color.getPredominance() >= 5.0f)
-                .collect(Collectors.toList());
+                .toList();
 
         if (card.getColor_identity() == null || card.getColor_identity().isEmpty()) {
             return true;
@@ -75,6 +73,31 @@ public class DeckServiceImpl implements DeckService {
                 .allMatch(colorAcronym ->
                         colorsWithMinPredominance.stream()
                                 .anyMatch(color -> String.valueOf(color.getAcronym()).equals(colorAcronym)));
+    }
+
+    public List<Card> findValidCards(List<Card> cards) {
+        return cards.stream()
+                .filter(Card::isValid)
+                .collect(Collectors.toList());
+    }
+
+    public List<Card> findInvalidCards(List<Card> cards) {
+        return cards.stream()
+                .filter(card -> !card.isValid())
+                .toList();
+    }
+
+    public Color findColorMin(List<Color> colors) {
+        return colors.stream()
+                .filter(color -> color.getPredominance() >= 5.0f)
+                .min(Comparator.comparing(Color::getPredominance))
+                .orElse(null);
+    }
+
+    public List<Card> findCardsWithColorMin(List<Card> cards, Color colorMin) {
+        return cards.stream()
+                .filter(card -> card.getColor_identity().contains(String.valueOf(colorMin != null ? colorMin.getAcronym() : "")))
+                .toList();
     }
 }
 
