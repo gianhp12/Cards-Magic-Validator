@@ -28,10 +28,20 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ```bash
 git clone https://github.com/gianhp12/Cards-Magic-Validator
 ```
+### Obs: Necessário possuir o Java instalado para executar o projeto. O mesmo pode ser baixado pelo link abaixo:
+<a>https://www.java.com/pt-BR/download/ie_manual.jsp?locale=pt_BR</a>
 
-##### Execute a aplicação em uma IDE de sua prefêrencia.
 
-#### O serviço inciará na porta padrão do Spring :8080.
+##### Execute a aplicação em uma IDE de sua prefêrencia ou realize o download do Maven pelo link: 
+<a>https://maven.apache.org/download.cgi</a>
+
+### Após ter concluido a instalação do Maven, navegue até a pasta raiz do projeto e rode o comando pelo terminal do Windows:
+ 
+ mvn clean install
+ 
+### O comando irá gerar um JAR executável na pasta target do projeto.
+
+### O serviço inciará na porta padrão do Spring :8080.
 
 Agradeço muito a LuizaLabs pela oportunidade!
 
