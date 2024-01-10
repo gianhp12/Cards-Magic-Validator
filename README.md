@@ -28,7 +28,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 git clone https://github.com/gianhp12/Cards-Magic-Validator
 ```
 
-##### As informações das cartas que serão validadas devem ser colocadas dentro do arquivo data.txt existente no caminho: cardsmagicvalidator\src\main\resources\data\data.txt
+##### As informações das cartas que serão validadas devem ser colocadas dentro do arquivo deck.txt existente no caminho: cardsmagicvalidator\src\main\resources\data\deck.txt
  Seguindo o padrão de quantidade, nome da carta e nomenclaturas de tipos de cartas entre colchetes.
 
 ##### Obs: Necessário possuir o Java instalado para executar o projeto. O mesmo pode ser baixado pelo link abaixo:
